@@ -22,17 +22,12 @@ class BehavioralStyleSurveySubmissionsController extends BehavioralStyleSurveysA
 		$this->set(compact('items'));
 		
 	}
-
-	public function view($id) {
-		parent::admin_edit($id);
-	}
 	
 	public function admin_view($id) {		
 		$submission = $this->BehavioralStyleSurveySubmission->find('first', array(
 			'conditions' => array('BehavioralStyleSurveySubmission.id' => $id),	
 			'contain' => array('BehavioralStyleSurveyBehavioralStyle', 'BehavioralStyleSurvey')
 		));
-		
 		
 		$header = 'Behavioral Style Survey Submission for ' . $submission['BehavioralStyleSurveySubmission']['name'];
 		$this->set(compact('header', 'submission'));
