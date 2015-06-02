@@ -1,0 +1,11 @@
+{
+	"Plugins": 
+	{
+		"BehavioralStyleSurveys": 
+		{
+			"name": "BehavioralStyleSurveys",
+			"description": "",
+			"since": "1.0.4"
+		}
+	}
+}
