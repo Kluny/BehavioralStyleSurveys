@@ -20,13 +20,7 @@ ___
 ##Models
 Models are wrappers for database tables, and can have their own logic as well. Conventionally, any data processing-heavy tasks should be carried out here.
 
-###Survey 
-- Fields
- - name of survey
- - url slug
- - admin recipient
-
-###Survey Submission
+####SurveySubmission
 - Fields
   - name of user
   - contact info (users are not required to sign in for this survey, so user contact data is not normalized to a separate Users table in this case)
@@ -38,6 +32,12 @@ Models are wrappers for database tables, and can have their own logic as well. C
   - processes user submitted data
   - saves it after processing
   - generates a personality graph
+  
+####Survey 
+- Fields
+ - name of survey
+ - url slug
+ - admin recipient
 
 ##Controllers
 
@@ -54,15 +54,15 @@ Controllers simply request information from the model and relay it to the approp
 ##Views
 View display data and receive user input.
 
+####SurveySubmission
+- admin_index - list of all user submissions
+- admin_view - view of a single user's data
+
 ####Survey
 - view - displays the questions and user input form.
 - index - lists all available surveys
 - admin_index - as above
 - admin_edit - create new surveys as needed
-
-####SurveySubmission
-- admin_index - list of all user submissions
-- admin_view - view of a single user's data
 
 ####Emails 	
 - beautifully formatted result to be delivered to surveyee (plus a text-only version)
