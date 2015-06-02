@@ -26,7 +26,7 @@ Models are wrappers for database tables, and can have their own logic as well. C
   - link to generated personality graph
   - link to pdf with more info
   - date created/modified
-- Methods
+- Additional logic
   - processes user submitted data
   - saves it after processing
   - generates a personality graph
