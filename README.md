@@ -9,7 +9,7 @@ However, the client in question had lots of changes they wanted to make. The mea
 So finally the client agreed to an overhaul of their entire site. This is one of several plugins that are being reviewed for code quality, and the quickest and easiest to fix, so it came first. 
 ___
 
-##Models: 
+##Models
 Models are wrappers for database tables, and can have their own logic as well. Conventionally, any data processing-heavy tasks should be carried out here.
 
 ###Survey 
@@ -31,7 +31,7 @@ Models are wrappers for database tables, and can have their own logic as well. C
   - saves it after processing
   - generates a personality graph
 
-##Controllers:
+##Controllers
 
 Controllers simply request information from the model and relay it to the appropriate view.
 
@@ -43,7 +43,7 @@ Controllers simply request information from the model and relay it to the approp
 ####Survey Controller 
 - nothing interesting
 
-##Views:
+##Views
 View display data and receive user input.
 
 ####Survey
