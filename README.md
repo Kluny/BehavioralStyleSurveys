@@ -7,6 +7,14 @@ The trouble is, this client's site had been worked on over the course of many ye
 However, the client in question had lots of changes they wanted to make. The meat of the survey was fine (the questions and results, that is), but they wanted a different URL to send to Australian customers, or a different admin recipient depending on who was taking the survey, things like that. Minor changes that should have been easy and painless, but because of the state of the codebase, would end up taking hours.
 
 So finally the client agreed to an overhaul of their entire site. This is one of several plugins that are being reviewed for code quality, and the quickest and easiest to fix, so it came first. 
+
+---
+
+I've made all this as simple and conventional as I could. It's not a complicated application and doesn't require any new wheels to be invented. All logic is stored in models, all display stuff is in views. Controllers act as a go-between and nothing more.
+
+This is in contrast to the previous state, where both the data processing (generating the graphs, doing math on the results, saving to database) and display code (yes, the actual HTML) were located in a single, astonishing controller function.
+
+The finished result is clearer, more maintainable, more performant, and more flexible, and will deliver lasting value to the client while reducing the developer's workload.
 ___
 
 ##Models
