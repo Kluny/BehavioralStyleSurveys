@@ -67,16 +67,6 @@ View display data and receive user input.
 ####Emails 	
 - beautifully formatted result to be delivered to surveyee (plus a text-only version)
 
----
-
-I've made all this as simple and conventional as I could. It's not a complicated application and doesn't require any new wheels to be invented. All logic is stored in models, all display stuff is in views. Controllers act as a go-between and nothing more. 
-
-This is in contrast to the previous state, where both the data processing (generating the graphs, doing math on the results, saving to database) and display code (yes, the actual HTML) were located in a single, astonishing controller function. 
-
-The finished result is clearer, more maintainable, more performant, and more flexible, and will deliver lasting value to the client while reducing the developer's workload.
-
-		
-
 
 
 
