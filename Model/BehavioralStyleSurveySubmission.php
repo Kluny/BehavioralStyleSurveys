@@ -54,9 +54,7 @@ class BehavioralStyleSurveySubmission extends BehavioralStyleSurveysAppModel
 		return true;
 	} 
 	
-	//get radio buttons into validation array
 	public function beforeValidate($options) {
-		
 		return true;
 	}
 	
@@ -66,11 +64,6 @@ class BehavioralStyleSurveySubmission extends BehavioralStyleSurveysAppModel
 	
 	public function processSubmission() {	
 	
-		//some guy who has been abusing the form has 'resper' in his email address, it's the name of his company. 
-		//this ought to be a custom validation rule. "naughty list email addresses". something to do if you're bored.
-		if(preg_match('/resper/', $this->data['BehavioralStyleSurveySubmission']['agent_email_address'])) {
-			return false;
-		} 
 	
 		$selectedOptions = $this->data['BehavioralStyleSurveySubmission']['submissionSelectedOption']; 
 		$weights = array(
@@ -185,8 +178,6 @@ class BehavioralStyleSurveySubmission extends BehavioralStyleSurveysAppModel
 		
 		
 	}
-
-	
 	
 	public function getAttachmentUrl() {
 		return $this->attachment_url;
