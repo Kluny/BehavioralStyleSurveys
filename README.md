@@ -1,3 +1,5 @@
+A plugin for CakePHP v2.3.
+
 # BehavioralStylesSurvey
 
 This CakePHP plugin was created for a client that specializes in career coaching. They have this survey where they ask 20 questions and put together a "personality type" for the survey. It's loosely based on the Myers-Briggs test. 
