@@ -151,7 +151,7 @@ class BehavioralStyleSurveySubmission extends BehavioralStyleSurveysAppModel
 				$attachment_url		= 'webroot/pdf/10.pdf';
 			} else if ($x < -4.5 && $y < -4.5) {
 				// C3
-				$attachment_url		= 'webroot/pdf/1.pdf';
+				$attachment_url		= 'webroot/pdf/11.pdf';
 			} else {
 				// C4
 				$attachment_url		= 'webroot/pdf/12.pdf';
