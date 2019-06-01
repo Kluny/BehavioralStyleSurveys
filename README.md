@@ -17,10 +17,10 @@ This is in contrast to the previous state, where both the data processing (gener
 The finished result is clearer, more maintainable, more performant, and more flexible, and will deliver lasting value to the client while reducing the developer's workload.
 ___
 
-##Models
+## Models
 Models are wrappers for database tables, and can have their own logic as well. Conventionally, any data processing-heavy tasks should be carried out here.
 
-####SurveySubmission
+#### SurveySubmission
 - Fields
   - name of user
   - contact info (users are not required to sign in for this survey, so user contact data is not normalized to a separate Users table in this case)
@@ -33,38 +33,38 @@ Models are wrappers for database tables, and can have their own logic as well. C
   - saves it after processing
   - generates a personality graph
   
-####Survey 
+#### Survey 
 - Fields
  - name of survey
  - url slug
  - admin recipient
 
-##Controllers
+## Controllers
 
 Controllers simply request information from the model and relay it to the appropriate view.
 
-####SurveySubmissions Controller
+#### SurveySubmissions Controller
 - grabs survey-specific data from database and relays it to the view
 - sends result data to admin recipient and survey
 - calls data processing function
 
-####Survey Controller 
+#### Survey Controller 
 - nothing interesting
 
-##Views
+## Views
 View display data and receive user input.
 
-####SurveySubmission
+#### SurveySubmission
 - admin_index - list of all user submissions
 - admin_view - view of a single user's data
 
-####Survey
+#### Survey
 - view - displays the questions and user input form.
 - index - lists all available surveys
 - admin_index - as above
 - admin_edit - create new surveys as needed
 
-####Emails 	
+#### Emails 	
 - beautifully formatted result to be delivered to surveyee (plus a text-only version)
 
 
